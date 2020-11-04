@@ -15,17 +15,23 @@ const handleUserInput = function (keyPress) {
     process.exit();
   };
   if (keyPress === '\u0077') {
-    return connection.write("Move: up");
+     return connection.write("Move: up");
   };
   if (keyPress === '\u0073') {
-    return connection.write("Move: down");
+     return connection.write("Move: down");
   };
   if (keyPress === '\u0061') {
-    return connection.write("Move: left");
+     return connection.write("Move: left");
   };
   if (keyPress === '\u0064') {
-    return connection.write("Move: right");
+     return connection.write("Move: right");
   };
+  if (keyPress === '\u0071') {
+    return connection.write("Say: I AM PYTHON");
+  };
+  if (keyPress === '\u0065') {
+    return connection.write("Say: TOO SSSSSSLOW");
+ };
 };
 
 module.exports = { setupInput }
