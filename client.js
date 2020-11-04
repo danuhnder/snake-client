@@ -11,8 +11,12 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', data => console.log(data))
-  conn.on('connect', () => console.log("SNAKE IS DEPLOYED"));
-  conn.on('connect', () => conn.write('Name: DAN'));
+  conn.on('connect', () => {
+    console.log("SNAKE IS DEPLOYED");
+    conn.write('Name: DAN');
+    setInterval( () => conn.write('Move: up'), 200);
+  });
+  
 
 
   return conn;
