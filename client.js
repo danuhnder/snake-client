@@ -14,7 +14,7 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("SNAKE IS DEPLOYED");
     conn.write('Name: DAN');
-    setInterval( () => conn.write('Move: up'), 200);
+    // setInterval( () => conn.write('Move: up'), 200);
   });
   
 
